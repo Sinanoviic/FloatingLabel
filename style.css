@@ -10,7 +10,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #0d0d0d;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .input-group{
@@ -18,32 +19,43 @@ body{
     position: relative;
 }
 
-.input-group label{
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 15px;
-    font-size: 16px;
-    pointer-events: none;
-    color: rgb(218, 223, 223);
-    padding: 0 5px;
-    transition: .5s;
-}
 .input-group input{
     width: 360px;
     height: 60px;
-    color: #fff;
     font-size: 16px;
-    padding: 0 15px;
-    border: 1.2px solid rgb(220, 223, 223);
-    background: transparent;
+    padding: 0 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
     outline: none;
-    border-radius: 5px;
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
 }
 
-.input-group input.focus~label,
-.input-group input:valid~label{
-    top: 0;
-    background: #163936;
-    font-size: 14px;
+.input-group input:focus{
+    border-color: #4fd1c5;
+    box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.25);
+}
+
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    padding: 0 6px;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label{
+    top: -8px;
+    font-size: 13px;
+    color: #4fd1c5;
+    background: linear-gradient(135deg, #203a43, #2c5364);
+    border-radius: 6px;
 }
