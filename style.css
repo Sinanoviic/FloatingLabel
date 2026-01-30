@@ -59,3 +59,19 @@ body{
     background: linear-gradient(135deg, #203a43, #2c5364);
     border-radius: 6px;
 }
+
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #4fd1c5;
+}
